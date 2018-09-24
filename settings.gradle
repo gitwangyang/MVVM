@@ -1,1 +1,1 @@
-include ':app', ':XRefreshView', ':FlycoTabLayout_Lib', ':BaseRecyclerViewAdapterHelper'
+include ':app'
