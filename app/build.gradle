@@ -32,16 +32,16 @@ android {
 
     signingConfigs {
         release {
-            storeFile file(RELEASE_STOREFILE)
-            storePassword RELEASE_STOREPASSWORD
-            keyAlias RELEASE_KEYALIAS
-            keyPassword RELEASE_KEYPASSWORD
+            storeFile file('/release.jks')
+            storePassword '123456'
+            keyAlias 'dotawang'
+            keyPassword '123456'
         }
         debug {
-            storeFile file(DEBUG_STOREFILE)
-            storePassword DEBUG_STOREPASSWORD
-            keyAlias DEBUG_KEYALIAS
-            keyPassword DEBUB_KEYPASSWORD
+            storeFile file('/release.jks')
+            storePassword '123456'
+            keyAlias 'dotawang'
+            keyPassword '123456'
         }
     }
 
@@ -101,9 +101,9 @@ android {
 }
 
 dependencies {
-    api fileTree(include: ['*.jar'], dir: 'libs')
-    api rootProject.ext.support["constraint-layout"]
-    testImplementation rootProject.ext.support["junit"]
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.support["constraint-layout"]
+    testApi 'junit:junit:4.12'
     androidTestImplementation rootProject.ext.support["runner"]
     androidTestImplementation rootProject.ext.support["espresso-core"]
     //support
