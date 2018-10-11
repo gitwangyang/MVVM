@@ -24,6 +24,12 @@ android {
         //语言类型
         resConfigs "en", "fr"
     }
+    //引入jar和aar三方包的地址
+    repositories {
+        flatDir {
+            dirs 'libs', 'modules'
+        }
+    }
     sourceSets {
         main {
             jniLibs.srcDirs = ['jniLibs']
@@ -106,6 +112,7 @@ dependencies {
     testApi 'junit:junit:4.12'
     androidTestImplementation rootProject.ext.support["runner"]
     androidTestImplementation rootProject.ext.support["espresso-core"]
+    api(name: 'banner-release', ext: 'aar')
     //support
     api rootProject.ext.support["support-annotations"]
     api rootProject.ext.support["support-v4"]

@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="_dddddd">#ffdddddd</color>
+    <color name="_222222">#ff222222</color>
+    <color name="_999999">#ff999999</color>
+    <color name="_ffffff">#ffffffff</color>
+    <color name="_f6f6f8">#fff6f6f8</color>
+
+
+    <color name="btn_confirm_bg">#009BE7</color>
 </resources>
