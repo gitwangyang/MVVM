@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.dotawang.mvvm.ui.vm.LoginViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/_E4E4E4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/bg_linear_login_corner10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorHint"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:hint="@string/account_login"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:src="@drawable/clean_edit"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/bg_linear_login_corner10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColorHint"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:hint="@string/password_login"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/iv_swich_passwrod"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:src="@drawable/show_psw"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:text="@string/login"
+            android:textColor="@color/_ffffff"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:background="@drawable/bg_btn_login_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:gravity="right|center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="orange">#FFA500</color>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
@@ -9,7 +17,22 @@
     <color name="_999999">#ff999999</color>
     <color name="_ffffff">#ffffffff</color>
     <color name="_f6f6f8">#fff6f6f8</color>
+    <color name="_E4E4E4">#E4E4E4</color>
+    <color name="_8B9CAC">#8B9CAC</color>
 
 
     <color name="btn_confirm_bg">#009BE7</color>
+
+    <array name="in_colors_light">
+        <item>#4B03A9F4</item>
+        <item>#3303A9F4</item>
+        <item>#1903A9F4</item>
+    </array>
+
+    <!--login-->
+    <color name="textColor">#202020</color>
+    <color name="textColorHint">#A0A0A0</color>
+    <color name="textColorVice">#6C6C6C</color>
+
+
 </resources>
