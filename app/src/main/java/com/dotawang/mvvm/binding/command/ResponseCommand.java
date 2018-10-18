@@ -4,7 +4,7 @@ package com.dotawang.mvvm.binding.command;
 import io.reactivex.functions.Function;
 
 /**
- * About : kelin的ResponseCommand
+ * About : ResponseCommand
  * 执行的命令事件转换
  */
 public class ResponseCommand<T, R> {
