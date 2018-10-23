@@ -21,6 +21,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        initBeforeCreate();
         super.onCreate(savedInstanceState);
 
         initParam();
@@ -34,6 +35,13 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         viewModel.onCreate();
 
         viewModel.registerRxBus();
+    }
+
+    /**
+     * 界面创建前执行
+     */
+    public void initBeforeCreate() {
+
     }
 
     @Override

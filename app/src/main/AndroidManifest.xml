@@ -25,7 +25,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="m">
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +37,7 @@
             android:name=".crash.DefaultErrorActivity"
             android:process=":error_activity" />
         <activity android:name=".MainActivity"/>
+        <activity android:name=".ui.LoginActivity"/>
         <provider
             android:name=".crash.CaocInitProvider"
             android:authorities="${applicationId}.customactivityoncrashinitprovider"
