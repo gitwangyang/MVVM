@@ -4,14 +4,14 @@
     package="com.dotawang.mvvm">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <!--相机拍照权限-->
+    <!-- 相机拍照权限 -->
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -22,8 +22,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
@@ -32,17 +32,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".base.ContainerActivity"/>
+        <activity android:name=".base.ContainerActivity" />
         <activity
             android:name=".crash.DefaultErrorActivity"
             android:process=":error_activity" />
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".ui.LoginActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.LoginActivity" />
+
         <provider
             android:name=".crash.CaocInitProvider"
             android:authorities="${applicationId}.customactivityoncrashinitprovider"
             android:exported="false"
             android:initOrder="101" />
+
+        <activity android:name=".ui.activity.WelcomeActivity"/>
     </application>
 
 </manifest>

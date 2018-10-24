@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 //当前beta版本号
 ext.build_number = "beta1";
 //显示的时间格式，形如20170710
-def releaseTime(){
-    return new Date().format("yyyyMMdd",TimeZone.getDefault());
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getDefault());
 }
 
 android {
@@ -76,9 +76,8 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
-        exclude'META-INF/rxjava.properties'
+        exclude 'META-INF/rxjava.properties'
     }
-
 
     // 打包命名
     applicationVariants.all { variant ->
@@ -88,7 +87,7 @@ android {
                 // 显示app名称+当前版本号
                 def fileName = "汪洋-V${variant.versionName}"
                 // 如果有渠道，显示渠道名""
-                if (variant.flavorName!=""){
+                if (variant.flavorName != "") {
                     fileName = fileName + "-${variant.flavorName}"
                 }
                 // 加入打包时间

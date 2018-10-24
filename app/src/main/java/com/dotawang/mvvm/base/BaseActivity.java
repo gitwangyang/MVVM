@@ -21,8 +21,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        initBeforeCreate();
         super.onCreate(savedInstanceState);
+
+        initBeforeCreate();
 
         initParam();
 

@@ -20,12 +20,26 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop" />
 
-        <ImageView
-            android:id="@+id/iv_mark"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_check_net_splash"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/qq" />
+            android:layout_above="@+id/progress_splash"
+            android:gravity="center_horizontal"
+            android:text="检测网络 ..."
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_splash"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/dialog_loading_anim_progress" />
+
 
     </RelativeLayout>
 </layout>
