@@ -40,6 +40,14 @@ public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding,Welcome
     public void initData() {
         super.initData();
 
+        initTaskSkip();
+
+    }
+
+    /**
+     * 跳转数字的倒计时
+     */
+    private void initTaskSkip() {
         asyncTask = new AsyncTask() {
 
             @Override
@@ -58,7 +66,7 @@ public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding,Welcome
 
             @Override
             protected void onPostExecute(Object o) {
-                if (viewModel.isClickSkip()){
+                if (!viewModel.isClickSkip()){
                     startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                     finish();
                 }
