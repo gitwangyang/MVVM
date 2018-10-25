@@ -34,5 +34,8 @@
     <color name="textColorHint">#A0A0A0</color>
     <color name="textColorVice">#6C6C6C</color>
 
+    <!--bottom bar-->
+    <color name="bg_bottom_bar">#4455B7</color>
+
 
 </resources>

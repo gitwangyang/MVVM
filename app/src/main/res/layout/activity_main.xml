@@ -3,22 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="com.dotawang.mvvm.base.BaseViewModel"/>
         <variable
             name="viewmodel"
-            type="com.dotawang.mvvm.ui.vm.MainViewModel"/>
+            type="BaseViewModel"/>
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tv_dialog"
-            onClickCommand="@{viewmodel.toastDialogOnClickCommand}"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello World!"
-            android:gravity="center" />
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/bottom_view"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F0F0" />
+
+        <me.majiajie.pagerbottomtabstrip.PageBottomTabLayout
+            android:id="@+id/pager_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:elevation="8dp" />
+    </LinearLayout>
 
 </layout>

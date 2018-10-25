@@ -155,4 +155,8 @@ dependencies {
     api rootProject.ext.dependencies.butterknife
 //    //multidex
 //    api rootProject.ext.dependencies.multidex
+    //PageBottomTabLayout底部导航栏组件
+    api rootProject.ext.dependencies.pagebottomtablayout
+    //tkrefreshlayout下拉刷新，上拉加载
+    api rootProject.ext.dependencies.tkrefreshlayout
 }

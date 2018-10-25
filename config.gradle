@@ -66,6 +66,9 @@ ext{
             "butterknife"                          : "com.jakewharton:butterknife:8.8.1",
 //            //multidex
 //            "multidex"                             : "com.android.support:multidex:1.0.3",
-
+            //tablayout
+            "pagebottomtablayout"                   : "me.majiajie:pager-bottom-tab-strip:2.2.5",
+            //tkrefreshlayout
+            "tkrefreshlayout"                       : "com.lcodecorex:tkrefreshlayout:1.0.7",
     ]
 }

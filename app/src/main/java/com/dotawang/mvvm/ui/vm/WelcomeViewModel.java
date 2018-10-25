@@ -7,6 +7,7 @@ import com.dotawang.mvvm.ui.activity.MainActivity;
 import com.dotawang.mvvm.base.BaseViewModel;
 import com.dotawang.mvvm.binding.command.BindingAction;
 import com.dotawang.mvvm.binding.command.BindingCommand;
+import com.dotawang.mvvm.utils.ButtonClickUtils;
 
 
 /**
@@ -32,11 +33,12 @@ public class WelcomeViewModel extends BaseViewModel {
      * 从欢迎页跳转到首页
      */
     private void skipToMain() {
-        startActivity(MainActivity.class);
-        setClickSkip(false);
-        //关闭页面
-        ((Activity) context).finish();
-
+        if (!ButtonClickUtils.isFastDoubleClick()){
+            startActivity(MainActivity.class);
+            setClickSkip(false);
+            //关闭页面
+            ((Activity) context).finish();
+        }
     }
 
     public boolean isClickSkip() {
