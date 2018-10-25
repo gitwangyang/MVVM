@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.SystemClock;
 
 import com.dotawang.mvvm.BR;
-import com.dotawang.mvvm.MainActivity;
 import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.base.BaseActivity;
 import com.dotawang.mvvm.databinding.ActivityWelcomeBinding;
@@ -59,8 +58,10 @@ public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding,Welcome
 
             @Override
             protected void onPostExecute(Object o) {
-                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                finish();
+                if (viewModel.isClickSkip()){
+                    startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+                    finish();
+                }
             }
         };
         asyncTask.execute();

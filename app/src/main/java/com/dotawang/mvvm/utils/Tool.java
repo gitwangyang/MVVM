@@ -27,7 +27,9 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.app.AppApplication;
+import com.dotawang.mvvm.ui.activity.MainActivity;
 
 import java.io.File;
 import java.lang.reflect.Method;

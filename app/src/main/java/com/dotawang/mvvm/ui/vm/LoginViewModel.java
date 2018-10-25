@@ -4,18 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
-import android.databinding.ObservableInt;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.view.View;
-import android.widget.Toast;
 
-import com.dotawang.mvvm.MainActivity;
+import com.dotawang.mvvm.ui.activity.MainActivity;
 import com.dotawang.mvvm.base.BaseViewModel;
 import com.dotawang.mvvm.binding.command.BindingAction;
 import com.dotawang.mvvm.binding.command.BindingCommand;
-import com.dotawang.mvvm.binding.command.BindingConsumer;
-import com.dotawang.mvvm.ui.LoginActivity;
 import com.dotawang.mvvm.utils.ToastUtils;
 
 /**

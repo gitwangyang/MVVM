@@ -3,11 +3,10 @@ package com.dotawang.mvvm.ui.vm;
 import android.app.Activity;
 import android.content.Context;
 
-import com.dotawang.mvvm.MainActivity;
+import com.dotawang.mvvm.ui.activity.MainActivity;
 import com.dotawang.mvvm.base.BaseViewModel;
 import com.dotawang.mvvm.binding.command.BindingAction;
 import com.dotawang.mvvm.binding.command.BindingCommand;
-import com.dotawang.mvvm.ui.activity.WelcomeActivity;
 
 
 /**
@@ -15,6 +14,8 @@ import com.dotawang.mvvm.ui.activity.WelcomeActivity;
  */
 
 public class WelcomeViewModel extends BaseViewModel {
+    //判断是否点击跳转按钮
+    private boolean isClickSkip;
 
     public BindingCommand skipToMainOnClickCommand = new BindingCommand(new BindingAction() {
         @Override
@@ -32,8 +33,17 @@ public class WelcomeViewModel extends BaseViewModel {
      */
     private void skipToMain() {
         startActivity(MainActivity.class);
+        setClickSkip(false);
         //关闭页面
         ((Activity) context).finish();
 
+    }
+
+    public boolean isClickSkip() {
+        return isClickSkip;
+    }
+
+    public void setClickSkip(boolean clickSkip) {
+        isClickSkip = clickSkip;
     }
 }
