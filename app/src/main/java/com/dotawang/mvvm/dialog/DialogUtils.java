@@ -3,7 +3,7 @@ package com.dotawang.mvvm.dialog;
 import android.app.Activity;
 import android.content.Context;
 
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.ToastUtils;
 
 /**
  * dialog工具类
@@ -86,10 +86,10 @@ public class DialogUtils {
                 dialog.setListener(listener);
                 dialog.show(activity1.getFragmentManager(), CommonDialog.class.getSimpleName());
             } else {
-                Tool.showToast(content);
+                ToastUtils.showShortSafe(content);
             }
         } else {
-            Tool.showToast(content);
+            ToastUtils.showShortSafe(content);
         }
     }
 
@@ -107,10 +107,10 @@ public class DialogUtils {
                 dialog.setICommonDialogDismissListener(dialogDismissListener);
                 dialog.show(activity1.getFragmentManager(), CommonDialog.class.getSimpleName());
             } else {
-                Tool.showToast(content);
+                ToastUtils.showShortSafe(content);
             }
         } else {
-            Tool.showToast(content);
+            ToastUtils.showShortSafe(content);
         }
     }
 
@@ -130,10 +130,10 @@ public class DialogUtils {
                 dialog.setListener(null);
                 dialog.show(activity1.getFragmentManager(), CommonDialog.class.getSimpleName());
             } else {
-                Tool.showToast(content);
+                ToastUtils.showShortSafe(content);
             }
         } else {
-            Tool.showToast(content);
+            ToastUtils.showShortSafe(content);
         }
     }
 }

@@ -14,8 +14,7 @@ import com.dotawang.mvvm.databinding.ActivityMainBinding;
 import com.dotawang.mvvm.ui.fragment.HomeFragment;
 import com.dotawang.mvvm.ui.fragment.MessageFragment;
 import com.dotawang.mvvm.ui.fragment.MineFragment;
-import com.dotawang.mvvm.ui.vm.MainViewModel;
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,7 +102,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,BaseViewModel
      */
     public void exit(){
         if ((System.currentTimeMillis() - mExitTime)>2000){
-            Tool.showToast(getResources().getString(R.string.fish_app));
+            ToastUtils.showShortSafe(getResources().getString(R.string.fish_app));
             mExitTime = System.currentTimeMillis();
         }else {
             finish();

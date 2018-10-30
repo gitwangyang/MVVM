@@ -8,7 +8,7 @@ import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.base.BaseActivity;
 import com.dotawang.mvvm.databinding.ActivitySplashBinding;
 import com.dotawang.mvvm.ui.vm.SplashViewModel;
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.AppUtils;
 
 /**
  * 启动页
@@ -22,7 +22,7 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding,SplashVie
         super.initBeforeCreate();
         //给欢迎页的背景置空，释放内存
         getWindow().setBackgroundDrawable(null);
-        Tool.initStatus(this);
+        AppUtils.initStatus(this);
     }
 
     @Override

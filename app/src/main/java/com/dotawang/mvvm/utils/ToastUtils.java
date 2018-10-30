@@ -349,7 +349,7 @@ public final class ToastUtils {
      * @param resId    资源Id
      * @param duration 显示时长
      */
-    private static void show(@StringRes int resId, int duration) {
+    public static void show(@StringRes int resId, int duration) {
         show(Utils.getContext().getResources().getText(resId).toString(), duration);
     }
 
@@ -360,7 +360,7 @@ public final class ToastUtils {
      * @param duration 显示时长
      * @param args     参数
      */
-    private static void show(@StringRes int resId, int duration, Object... args) {
+    public static void show(@StringRes int resId, int duration, Object... args) {
         show(String.format(Utils.getContext().getResources().getString(resId), args), duration);
     }
 
@@ -371,7 +371,7 @@ public final class ToastUtils {
      * @param duration 显示时长
      * @param args     参数
      */
-    private static void show(String format, int duration, Object... args) {
+    public static void show(String format, int duration, Object... args) {
         show(String.format(format, args), duration);
     }
 
@@ -381,7 +381,7 @@ public final class ToastUtils {
      * @param text     文本
      * @param duration 显示时长
      */
-    private static void show(CharSequence text, int duration) {
+    public static void show(CharSequence text, int duration) {
         cancel();
         boolean isCustom = false;
         if (sViewWeakReference != null) {

@@ -14,7 +14,7 @@ import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.base.BaseActivity;
 import com.dotawang.mvvm.databinding.ActivityLoginBinding;
 import com.dotawang.mvvm.ui.vm.LoginViewModel;
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.EditTextUtils;
 
 /**
  * 登录界面
@@ -68,8 +68,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding,LoginViewMo
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                Tool.setEditTextInputSpace(charSequence,binding.etUsername);
-                Tool.setEditTextInputSpeChat(binding.etUsername);
+                EditTextUtils.setEditTextInputSpace(charSequence,binding.etUsername);
+                EditTextUtils.setEditTextInputSpeChat(binding.etUsername);
             }
 
             @Override
@@ -89,8 +89,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding,LoginViewMo
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                Tool.setEditTextInputSpace(charSequence,binding.etPassword);
-                Tool.setEditTextInputSpeChat(binding.etPassword);
+                EditTextUtils.setEditTextInputSpace(charSequence,binding.etPassword);
+                EditTextUtils.setEditTextInputSpeChat(binding.etPassword);
             }
 
             @Override

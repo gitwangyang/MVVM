@@ -10,7 +10,7 @@ import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.base.BaseActivity;
 import com.dotawang.mvvm.databinding.ActivityWelcomeBinding;
 import com.dotawang.mvvm.ui.vm.WelcomeViewModel;
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.AppUtils;
 
 /**
  * 欢迎页
@@ -22,7 +22,7 @@ public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding,Welcome
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
-        Tool.initStatus(this);
+        AppUtils.initStatus(this);
         return R.layout.activity_welcome;
     }
 

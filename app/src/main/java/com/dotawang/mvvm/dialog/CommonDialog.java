@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dotawang.mvvm.R;
-import com.dotawang.mvvm.utils.Tool;
+import com.dotawang.mvvm.utils.ScreenUtils;
 
 
 /**
@@ -81,7 +81,7 @@ public class CommonDialog extends DialogFragment {
         } else {
             tvTitle.setVisibility(View.GONE);
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) tvContent.getLayoutParams();
-            layoutParams.topMargin = Tool.dpToPx(38);
+            layoutParams.topMargin = ScreenUtils.dpToPx(38);
             tvContent.setLayoutParams(layoutParams);
         }
         if (!TextUtils.isEmpty(getArguments().getString(KEY_CONTENT))) {
