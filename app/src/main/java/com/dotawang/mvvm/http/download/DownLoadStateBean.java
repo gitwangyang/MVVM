@@ -5,10 +5,6 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 
-/**
- * Created by goldze on 2017/5/11.
- */
-
 public class DownLoadStateBean implements Serializable, Parcelable {
     long total; //  文件总大小
     long bytesLoaded; //已加载文件的大小

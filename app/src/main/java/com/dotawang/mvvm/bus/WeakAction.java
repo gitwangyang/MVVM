@@ -8,7 +8,7 @@ import java.lang.ref.WeakReference;
 
 
 /**
- * About : kelin的WeakBindingAction
+ * WeakBindingAction
  */
 public class WeakAction<T> {
     private BindingAction action;

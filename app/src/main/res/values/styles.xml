@@ -1,10 +1,4 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="toolbarStyle">@style/MyToolbar</item>
-    </style>
-
     <!--Toolbar 去除左侧默认边距-->
     <style name="MyToolbar" parent="Widget.AppCompat.Toolbar">
         <item name="contentInsetStart">0dp</item>

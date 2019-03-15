@@ -9,8 +9,7 @@ import com.dotawang.mvvm.utils.ToastUtils;
 import io.reactivex.observers.DisposableObserver;
 
 /**
- * Created by goldze on 2017/5/10.
- * 该类仅供参考，实际业务Code, 根据需求来定义，
+ * 该类仅供参考，实际业务Code, 根据需求来定义
  */
 public abstract class BaseSubscriber<T> extends DisposableObserver<T> {
     public abstract void onResult(T t);

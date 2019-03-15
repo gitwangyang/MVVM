@@ -30,7 +30,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by goldze on 2017/5/10.
  * RetrofitClient封装单例类, 实现网络请求
  */
 public class RetrofitClient {

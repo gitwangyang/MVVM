@@ -6,7 +6,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Created by goldze on 2017/5/14.
  * 时间相关常量
  */
 public final class TimeConstants {

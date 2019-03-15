@@ -9,11 +9,6 @@ import android.widget.EditText;
 
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
-
-/**
- * Created by goldze on 2017/6/16.
- */
-
 public class ViewAdapter {
     /**
      * EditText重新获取焦点的事件绑定

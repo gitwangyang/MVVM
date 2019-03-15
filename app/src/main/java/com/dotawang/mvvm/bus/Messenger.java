@@ -13,7 +13,7 @@ import java.util.List;
 
 
 /**
- * About : kelin的Messenger
+ * Messenger
  */
 public class Messenger {
 

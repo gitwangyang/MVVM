@@ -8,7 +8,8 @@ import com.dotawang.mvvm.utils.Utils;
 
 
 /**
- * Created by goldze on 2017/6/15.
+ * 全局Application基类
+ * @author DotaWang
  */
 
 public class BaseApplication extends Application {

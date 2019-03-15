@@ -13,9 +13,6 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.functions.Consumer;
 import io.reactivex.subjects.PublishSubject;
 
-/**
- * Created by goldze on 2017/6/18.
- */
 public final class ViewAdapter {
 
     @SuppressWarnings("unchecked")

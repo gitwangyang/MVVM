@@ -160,4 +160,14 @@
     <declare-styleable name="ControlDistributeLinearLayout">
         <attr name="distribute_event" format="boolean" />
     </declare-styleable>
+
+    <!--带有删除图标的输入框-->
+    <declare-styleable name="EditTextWithDeleteIcon">
+        <attr name="isAliganCenter" />
+        <attr name="showDeleteIcon" />
+        <attr name="deleteIconWidth" />
+        <attr name="deleteIconHeight" />
+    </declare-styleable>
+
+
 </resources>

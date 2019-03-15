@@ -6,11 +6,6 @@ import android.widget.CompoundButton;
 
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
-
-/**
- * Created by goldze on 2017/6/16.
- */
-
 public class ViewAdapter {
     /**
      * @param bindingCommand //绑定监听

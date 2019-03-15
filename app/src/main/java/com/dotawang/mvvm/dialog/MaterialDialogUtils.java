@@ -1,4 +1,4 @@
-package com.dotawang.mvvm.utils;
+package com.dotawang.mvvm.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,7 +20,7 @@ import java.util.List;
 
 
 /**
- * Created by goldze on 2017/5/10.
+ * dialog的封装
  */
 
 public class MaterialDialogUtils {

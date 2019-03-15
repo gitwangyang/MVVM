@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
+                android:textColor="@color/white"
                 android:layout_marginRight="6dp"
                 android:text="2s"
                 android:textSize="14sp" />
@@ -45,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="跳过"
+                android:textColor="@color/white"
                 android:textSize="14sp" />
         </LinearLayout>
     </RelativeLayout>

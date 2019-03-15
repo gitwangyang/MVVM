@@ -12,10 +12,6 @@ import java.util.List;
 import okhttp3.Request;
 import okio.Buffer;
 
-/**
- * @author ihsan on 09/02/2017.
- */
-
 class Printer {
 
     private static final int JSON_INDENT = 3;
@@ -53,57 +49,65 @@ class Printer {
     static void printJsonRequest(LoggingInterceptor.Builder builder, Request request) {
         String requestBody = LINE_SEPARATOR + BODY_TAG + LINE_SEPARATOR + bodyToString(request);
         String tag = builder.getTag(true);
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, REQUEST_UP_LINE);
+        }
         logLines(builder.getType(), tag, new String[]{URL_TAG + request.url()}, builder.getLogger(), false);
         logLines(builder.getType(), tag, getRequest(request, builder.getLevel()), builder.getLogger(), true);
         if (builder.getLevel() == Level.BASIC || builder.getLevel() == Level.BODY) {
             logLines(builder.getType(), tag, requestBody.split(LINE_SEPARATOR), builder.getLogger(), true);
         }
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, END_LINE);
+        }
     }
 
     static void printJsonResponse(LoggingInterceptor.Builder builder, long chainMs, boolean isSuccessful,
                                   int code, String headers, String bodyString, List<String> segments) {
         String responseBody = LINE_SEPARATOR + BODY_TAG + LINE_SEPARATOR + getJsonString(bodyString);
         String tag = builder.getTag(false);
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, RESPONSE_UP_LINE);
+        }
 
         logLines(builder.getType(), tag, getResponse(headers, chainMs, code, isSuccessful,
                 builder.getLevel(), segments), builder.getLogger(), true);
         if (builder.getLevel() == Level.BASIC || builder.getLevel() == Level.BODY) {
             logLines(builder.getType(), tag, responseBody.split(LINE_SEPARATOR), builder.getLogger(), true);
         }
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, END_LINE);
+        }
     }
 
     static void printFileRequest(LoggingInterceptor.Builder builder, Request request) {
         String tag = builder.getTag(true);
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, REQUEST_UP_LINE);
+        }
         logLines(builder.getType(), tag, new String[]{URL_TAG + request.url()}, builder.getLogger(), false);
         logLines(builder.getType(), tag, getRequest(request, builder.getLevel()), builder.getLogger(), true);
         if (builder.getLevel() == Level.BASIC || builder.getLevel() == Level.BODY) {
             logLines(builder.getType(), tag, OMITTED_REQUEST, builder.getLogger(), true);
         }
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, END_LINE);
+        }
     }
 
     static void printFileResponse(LoggingInterceptor.Builder builder, long chainMs, boolean isSuccessful,
                                   int code, String headers, List<String> segments) {
         String tag = builder.getTag(false);
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, RESPONSE_UP_LINE);
+        }
 
         logLines(builder.getType(), tag, getResponse(headers, chainMs, code, isSuccessful,
                 builder.getLevel(), segments), builder.getLogger(), true);
         logLines(builder.getType(), tag, OMITTED_RESPONSE, builder.getLogger(), true);
-        if (builder.getLogger() == null)
+        if (builder.getLogger() == null) {
             I.log(builder.getType(), tag, END_LINE);
+        }
     }
 
     private static String[] getRequest(Request request, Level level) {
@@ -179,8 +183,9 @@ class Printer {
         try {
             final Request copy = request.newBuilder().build();
             final Buffer buffer = new Buffer();
-            if (copy.body() == null)
+            if (copy.body() == null) {
                 return "";
+            }
             copy.body().writeTo(buffer);
             return getJsonString(buffer.readUtf8());
         } catch (final IOException e) {

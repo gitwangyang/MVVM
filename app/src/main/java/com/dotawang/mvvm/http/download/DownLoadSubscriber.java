@@ -2,10 +2,6 @@ package com.dotawang.mvvm.http.download;
 
 import io.reactivex.observers.DisposableObserver;
 
-/**
- * Created by goldze on 2017/5/11.
- */
-
 public class DownLoadSubscriber<T> extends DisposableObserver<T> {
     private ProgressCallBack fileCallBack;
 

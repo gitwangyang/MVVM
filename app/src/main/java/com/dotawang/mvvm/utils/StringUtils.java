@@ -1,7 +1,6 @@
 package com.dotawang.mvvm.utils;
 
 /**
- * Created by goldze on 2017/5/14.
  * 字符串相关工具类
  */
 public final class StringUtils {
@@ -54,14 +53,18 @@ public final class StringUtils {
      * @return {@code true}: 相等<br>{@code false}: 不相等
      */
     public static boolean equals(final CharSequence a, final CharSequence b) {
-        if (a == b) return true;
+        if (a == b) {
+            return true;
+        }
         int length;
         if (a != null && b != null && (length = a.length()) == b.length()) {
             if (a instanceof String && b instanceof String) {
                 return a.equals(b);
             } else {
                 for (int i = 0; i < length; i++) {
-                    if (a.charAt(i) != b.charAt(i)) return false;
+                    if (a.charAt(i) != b.charAt(i)) {
+                        return false;
+                    }
                 }
                 return true;
             }
@@ -107,7 +110,9 @@ public final class StringUtils {
      * @return 首字母大写字符串
      */
     public static String upperFirstLetter(final String s) {
-        if (isEmpty(s) || !Character.isLowerCase(s.charAt(0))) return s;
+        if (isEmpty(s) || !Character.isLowerCase(s.charAt(0))) {
+            return s;
+        }
         return String.valueOf((char) (s.charAt(0) - 32)) + s.substring(1);
     }
 
@@ -118,7 +123,9 @@ public final class StringUtils {
      * @return 首字母小写字符串
      */
     public static String lowerFirstLetter(final String s) {
-        if (isEmpty(s) || !Character.isUpperCase(s.charAt(0))) return s;
+        if (isEmpty(s) || !Character.isUpperCase(s.charAt(0))) {
+            return s;
+        }
         return String.valueOf((char) (s.charAt(0) + 32)) + s.substring(1);
     }
 
@@ -130,7 +137,9 @@ public final class StringUtils {
      */
     public static String reverse(final String s) {
         int len = length(s);
-        if (len <= 1) return s;
+        if (len <= 1) {
+            return s;
+        }
         int mid = len >> 1;
         char[] chars = s.toCharArray();
         char c;
@@ -149,7 +158,9 @@ public final class StringUtils {
      * @return 半角字符串
      */
     public static String toDBC(final String s) {
-        if (isEmpty(s)) return s;
+        if (isEmpty(s)) {
+            return s;
+        }
         char[] chars = s.toCharArray();
         for (int i = 0, len = chars.length; i < len; i++) {
             if (chars[i] == 12288) {
@@ -170,7 +181,9 @@ public final class StringUtils {
      * @return 全角字符串
      */
     public static String toSBC(final String s) {
-        if (isEmpty(s)) return s;
+        if (isEmpty(s)) {
+            return s;
+        }
         char[] chars = s.toCharArray();
         for (int i = 0, len = chars.length; i < len; i++) {
             if (chars[i] == ' ') {

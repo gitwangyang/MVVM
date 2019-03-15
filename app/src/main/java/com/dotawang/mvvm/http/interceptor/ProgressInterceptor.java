@@ -8,9 +8,8 @@ import okhttp3.Interceptor;
 import okhttp3.Response;
 
 /**
- * Created by goldze on 2017/5/10.
+ * 进度条的拦截器
  */
-
 public class ProgressInterceptor implements Interceptor {
 
     @Override

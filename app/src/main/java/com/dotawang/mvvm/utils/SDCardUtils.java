@@ -11,7 +11,6 @@ import java.io.File;
 import java.io.InputStreamReader;
 
 /**
- * Created by goldze on 2017/5/14.
  * SD卡相关工具类
  */
 public final class SDCardUtils {
@@ -36,7 +35,9 @@ public final class SDCardUtils {
      * @return SD卡路径
      */
     public static String getSDCardPath() {
-        if (!isSDCardEnable()) return null;
+        if (!isSDCardEnable()) {
+            return null;
+        }
         String cmd = "cat /proc/mounts";
         Runtime run = Runtime.getRuntime();
         BufferedReader bufferedReader = null;
@@ -69,7 +70,9 @@ public final class SDCardUtils {
      * @return SD卡data路径
      */
     public static String getDataPath() {
-        if (!isSDCardEnable()) return null;
+        if (!isSDCardEnable()) {
+            return null;
+        }
         return Environment.getExternalStorageDirectory().getPath() + File.separator + "data" + File.separator;
     }
 
@@ -80,7 +83,9 @@ public final class SDCardUtils {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static String getFreeSpace() {
-        if (!isSDCardEnable()) return null;
+        if (!isSDCardEnable()) {
+            return null;
+        }
         StatFs stat = new StatFs(getSDCardPath());
         long blockSize, availableBlocks;
         availableBlocks = stat.getAvailableBlocksLong();
@@ -95,7 +100,9 @@ public final class SDCardUtils {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     public static String getSDCardInfo() {
-        if (!isSDCardEnable()) return null;
+        if (!isSDCardEnable()) {
+            return null;
+        }
         SDCardInfo sd = new SDCardInfo();
         sd.isExist = true;
         StatFs sf = new StatFs(Environment.getExternalStorageDirectory().getPath());

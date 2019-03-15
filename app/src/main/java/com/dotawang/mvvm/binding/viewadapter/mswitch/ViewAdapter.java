@@ -7,10 +7,6 @@ import android.widget.Switch;
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
 
-/**
- * Created by goldze on 2017/6/18.
- */
-
 public class ViewAdapter {
     /**
      * 设置开关状态

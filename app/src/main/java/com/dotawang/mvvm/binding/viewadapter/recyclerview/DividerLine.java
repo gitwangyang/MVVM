@@ -8,9 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-/**
- * Created by goldze on 2017/6/16.
- */
 public class DividerLine extends RecyclerView.ItemDecoration {
     private static final String TAG = DividerLine.class.getCanonicalName();
     //默认分隔线厚度为2dp

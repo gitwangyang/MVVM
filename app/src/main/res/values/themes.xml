@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/MyToolbar</item>
+        <item name="colorPrimaryDark">#f24957</item>
+        <item name="colorPrimary">#f24957</item>
+        <item name="android:windowTitleSize">47dip</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppNoTitleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 
 import me.tatarka.bindingcollectionadapter2.ItemBinding;
 
-/**
- * Created by goldze on 2017/6/18.
- */
+
 public final class ViewAdapter {
 
     @BindingAdapter({"itemView", "observableList"})

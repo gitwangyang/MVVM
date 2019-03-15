@@ -6,9 +6,6 @@ import android.support.v4.view.ViewPager;
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
 
-/**
- * Created by goldze on 2017/6/18.
- */
 public class ViewAdapter {
     @BindingAdapter(value = {"onPageScrolledCommand", "onPageSelectedCommand", "onPageScrollStateChangedCommand"}, requireAll = false)
     public static void onScrollChangeCommand(final ViewPager viewPager,

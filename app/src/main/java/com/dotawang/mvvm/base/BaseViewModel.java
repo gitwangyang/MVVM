@@ -6,12 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.dotawang.mvvm.utils.MaterialDialogUtils;
+import com.dotawang.mvvm.dialog.MaterialDialogUtils;
 
-
-/**
- * Created by goldze on 2017/6/15.
- */
 public class BaseViewModel implements IBaseViewModel {
     protected Context context;
     protected Fragment fragment;

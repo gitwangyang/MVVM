@@ -23,7 +23,8 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
 /**
- *
+ * 主页面
+ * Created by Dota.Wang on 2018/10/23.
  */
 public class MainActivity extends BaseActivity<ActivityMainBinding,BaseViewModel> {
 

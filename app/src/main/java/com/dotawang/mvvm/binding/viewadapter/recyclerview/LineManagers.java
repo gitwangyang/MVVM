@@ -2,9 +2,6 @@ package com.dotawang.mvvm.binding.viewadapter.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 
-/**
- * Created by goldze on 2017/6/16.
- */
 public class LineManagers {
     protected LineManagers() {
     }

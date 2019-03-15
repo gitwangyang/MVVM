@@ -8,9 +8,6 @@ import android.widget.ScrollView;
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
 
-/**
- * Created by goldze on 2017/6/18.
- */
 public final class ViewAdapter {
 
     @SuppressWarnings("unchecked")

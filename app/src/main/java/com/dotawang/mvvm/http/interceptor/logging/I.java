@@ -5,9 +5,6 @@ import java.util.logging.Level;
 
 import okhttp3.internal.platform.Platform;
 
-/**
- * @author ihsan on 10/02/2017.
- */
 class I {
 
     protected I() {

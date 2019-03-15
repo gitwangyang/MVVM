@@ -12,10 +12,6 @@ import java.net.ConnectException;
 
 import retrofit2.HttpException;
 
-
-/**
- * Created by goldze on 2017/5/11.
- */
 public class ExceptionHandle {
 
     private static final int UNAUTHORIZED = 401;

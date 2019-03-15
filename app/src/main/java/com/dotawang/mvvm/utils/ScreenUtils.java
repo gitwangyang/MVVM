@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 屏幕宽高、像素转换工具类
  * Created by Dota.Wang on 2018/10/30.
  */
 

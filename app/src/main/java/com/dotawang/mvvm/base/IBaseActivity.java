@@ -1,9 +1,5 @@
 package com.dotawang.mvvm.base;
 
-/**
- * Created by goldze on 2017/6/15.
- */
-
 public interface IBaseActivity {
     /**
      * 初始化界面传递参数

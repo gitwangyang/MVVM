@@ -6,9 +6,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import com.dotawang.mvvm.binding.command.BindingCommand;
 
 
-/**
- * Created by goldze on 2017/6/18.
- */
 public class ViewAdapter {
     @BindingAdapter({"onRefreshCommand"})
     public static void onRefreshCommand(SwipeRefreshLayout swipeRefreshLayout, final BindingCommand onRefreshCommand) {

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 /**
- * Created by goldze on 2017/5/14.
  * 常用工具类
  */
 public final class Utils {
