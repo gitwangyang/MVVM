@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="9dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/home_icon_click_cotice"/>
+
+        <com.dotawang.mvvm.utils.custom.NewsViewFlipper
+            android:id="@+id/vf_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/push_up_in"
+            android:outAnimation="@anim/push_up_out"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tvMore_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp"
+            android:text="更多"
+            android:textColor="@color/_999999"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bg_notice_line" />
+</RelativeLayout>
