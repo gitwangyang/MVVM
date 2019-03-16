@@ -15,7 +15,7 @@ import com.dotawang.mvvm.utils.ToastUtils;
  */
 
 public class MainViewModel extends BaseViewModel {
-
+//todo  监听没响应 需要更改
     /**
      * 轮播图点击监听
      */
@@ -47,6 +47,5 @@ public class MainViewModel extends BaseViewModel {
 
     public MainViewModel(Context context) {
         super(context);
-        bannerOnClickCommand.execute();
     }
 }
