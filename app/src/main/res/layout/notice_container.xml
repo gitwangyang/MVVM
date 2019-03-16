@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="40dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    xmlns:binding="http://schemas.android.com/tools">
     <LinearLayout
         android:orientation="horizontal"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="40dp">
         <ImageView
+            binding:OnClickCommand="@{viewmodel.bannerOnClickCommand}"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="9dp"

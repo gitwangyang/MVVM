@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import com.dotawang.mvvm.BR;
 import com.dotawang.mvvm.R;
 import com.dotawang.mvvm.base.BaseFragment;
-import com.dotawang.mvvm.base.BaseViewModel;
+import com.dotawang.mvvm.databinding.FragmentHomeBinding;
+import com.dotawang.mvvm.ui.vm.MainViewModel;
 
 /**
  * Created by Dota.Wang on 2018/10/25.
  */
-
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment<FragmentHomeBinding,MainViewModel> {
     @Override
     public int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return R.layout.fragment_home;
@@ -26,7 +26,12 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    public BaseViewModel initViewModel() {
-        return new BaseViewModel();
+    public MainViewModel initViewModel() {
+        return new MainViewModel(getActivity());
+    }
+
+    @Override
+    public void initViewObservable() {
+        super.initViewObservable();
     }
 }

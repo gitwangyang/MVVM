@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/tools">
 
     <data>
 
-        <import type="com.dotawang.mvvm.base.BaseViewModel" />
+        <import type="com.dotawang.mvvm.ui.vm.MainViewModel" />
 
         <variable
             name="viewmodel"
-            type="BaseViewModel" />
+            type="com.dotawang.mvvm.ui.vm.MainViewModel" />
     </data>
 
     <ScrollView
@@ -24,9 +25,9 @@
             android:padding="10dp">
 
             <!--轮播图-->
-            <include layout="@layout/banner_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <include layout="@layout/banner_container"  binding:viewmodel="@{viewmodel}"/>
             <!--公告-->
-            <include layout="@layout/notice_container" android:layout_width="match_parent" android:layout_height="40dp"/>
+            <include layout="@layout/notice_container" binding:viewmodel="@{viewmodel}" />
             <!--H5-->
 
         </LinearLayout>
