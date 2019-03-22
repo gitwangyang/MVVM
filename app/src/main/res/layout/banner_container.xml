@@ -16,7 +16,7 @@
         android:orientation="vertical">
         <!--轮播图-->
         <com.youth.banner.Banner
-            binding:onClickCommand="@{viewmodel.bannerOnClickCommand}"
+            binding:onClickCommand="@{secondarviewmodel.bannerOnClickCommand}"
             android:id="@+id/vPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

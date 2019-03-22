@@ -15,7 +15,6 @@ import com.dotawang.mvvm.ui.vm.MainViewModel;
  * Created by Dota.Wang on 2018/10/25.
  */
 public class HomeFragment extends BaseFragment<FragmentHomeBinding,MainViewModel> {
-    //todo  FragmentHomeBinding 有点问题 不知道为什么调用不lmodel中的监听
     @Override
     public int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return R.layout.fragment_home;
