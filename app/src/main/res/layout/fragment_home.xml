@@ -25,7 +25,8 @@
             android:padding="10dp">
 
             <!--轮播图-->
-            <include layout="@layout/banner_container"  binding:viewmodel="@{viewmodel}"/>
+            <include layout="@layout/banner_container"
+                binding:secondarviewmodel="@{viewmodel}"/>
             <!--公告-->
             <include layout="@layout/notice_container" binding:viewmodel="@{viewmodel}" />
             <!--H5-->

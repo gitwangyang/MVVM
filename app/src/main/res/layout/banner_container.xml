@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:binding="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="100dp">
-    <!--轮播图-->
-    <com.youth.banner.Banner
-        android:id="@+id/vPager"
-        binding:onClickCommand="@{viewmodel.bannerOnClickCommand}"
-        app:image_scale_type="fit_xy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    xmlns:binding="http://schemas.android.com/tools">
 
-    <!--轮播圆点-->
-    <com.dotawang.mvvm.utils.custom.BannerIndicator
-        android:id="@+id/item_notice_num"
+    <data>
+
+        <variable
+            name="secondarviewmodel"
+            type="com.dotawang.mvvm.ui.vm.MainViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="10dp"
-        android:tag="0"
-        android:paddingLeft="15dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <!--轮播图-->
+        <com.youth.banner.Banner
+            binding:onClickCommand="@{viewmodel.bannerOnClickCommand}"
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:image_scale_type="fit_xy"
+             />
+
+        <!--轮播圆点-->
+        <com.dotawang.mvvm.utils.custom.BannerIndicator
+            android:id="@+id/item_notice_num"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:tag="0" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
